@@ -15,15 +15,15 @@ const sprites = {
     antibiotico: new Image(),
     alcool: new Image()
 };
-sprites.jogador.src = 'imagens/jogador.png';
-sprites.jogadorEsquerda.src = 'imagens/jogador_esquerda.png';
-sprites.virus1.src = 'imagens/virus1.png';
-sprites.virus2.src = 'imagens/virus2.png';
-sprites.virus3.src = 'imagens/virus3.png';
-sprites.virus4.src = 'imagens/virus4.png';
-sprites.vacina.src = 'imagens/vacina.png';
-sprites.antibiotico.src = 'imagens/antibiotico.png';
-sprites.alcool.src = 'imagens/alcool.png';
+sprites.jogador.src = '/imagens/jogador.png';
+sprites.jogadorEsquerda.src = '/imagens/jogador_esquerda.png';
+sprites.virus1.src = '/imagens/virus1.png';
+sprites.virus2.src = '/imagens/virus2.png';
+sprites.virus3.src = '/imagens/virus3.png';
+sprites.virus4.src = '/imagens/virus4.png';
+sprites.vacina.src = '/imagens/vacina.png';
+sprites.antibiotico.src = '/imagens/antibiotico.png';
+sprites.alcool.src = '/imagens/alcool.png';
 const elementoTimer = document.getElementById('timer');
 const elementoNivel = document.getElementById('nivel');
 const elementoContadorInimigos = document.getElementById('contador-inimigos');
@@ -438,3 +438,4 @@ window.addEventListener('keyup', (e) => { teclas[e.key.toLowerCase()] = false; }
 botaoReiniciar.addEventListener('click', configurar_jogo);
 
 configurar_jogo();
+
