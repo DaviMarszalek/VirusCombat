@@ -1,0 +1,51 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobrevivente JS Avançado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="interface-container-superior">
+        <div class="info-grupo">
+            <span>Tempo: <span id="timer">0</span>s</span>
+            <span>Nível: <span id="nivel">1</span></span>
+        </div>
+        <div id="chefe-barra-vida-container" style="display: none;">
+            <div id="chefe-barra-vida-preenchimento"></div>
+            <span>CICLOPE</span>
+        </div>
+        <div class="info-grupo">
+            <span>Inimigos: <span id="contador-inimigos">0</span></span>
+        </div>
+    </div>
+
+    <canvas id="telaJogo"></canvas>
+
+    <div id="interface-container-inferior">
+        <div id="barra-vida-container">
+            <div id="barra-vida-preenchimento"></div>
+            <span><span id="texto-vida">100/100</span></span>
+        </div>
+        <div id="xp-bar-container">
+            <div id="xp-bar-fill"></div>
+            <span>XP</span>
+        </div>
+    </div>
+
+    <div id="telaUpgrade" style="display: none;">
+        <h2>Subiu de Nível!</h2>
+        <p>Escolha uma melhoria:</p>
+        <div id="opcoesUpgrade">
+            </div>
+    </div>
+    
+    <div id="telaFimDeJogo" style="display: none;">
+        <h2>Fim de Jogo!</h2>
+        <p>Você sobreviveu por <span id="tempoFinal">0</span> segundos.</p>
+        <button id="botaoReiniciar">Jogar Novamente</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

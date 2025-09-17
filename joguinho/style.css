@@ -1,0 +1,119 @@
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+canvas {
+    background-image: url('imagens/bunker1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #eee;
+    z-index: 1;
+    transition: background-image 0.5s ease-in-out;
+}
+
+canvas.bunker1 {
+    background-image: url('imagens/bunker1.png');
+}
+
+canvas.bunker2 {
+    background-image: url('imagens/bunker2.png');
+}
+
+canvas.bunker3 {
+    background-image: url('imagens/bunker3.png');
+}
+
+/* Animação de tremor da tela */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+.shake {
+    animation: shake 0.1s linear;
+}
+
+/* --- INTERFACE DO JOGO --- */
+#interface-container-superior, #interface-container-inferior {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+.info-grupo { text-align: center; }
+
+/* Barra de Vida e XP */
+#barra-vida-container, #xp-bar-container {
+    width: 350px; height: 25px;
+    background-color: #555; border: 2px solid #eee;
+    border-radius: 5px; overflow: hidden; position: relative;
+}
+#barra-vida-preenchimento { height: 100%; background-color: #00ff00; transition: width 0.1s; }
+#xp-bar-fill { height: 100%; background-color: #00aaff; }
+#barra-vida-container span, #xp-bar-container span {
+    position: absolute; width: 100%; text-align: center; left: 0; top: 2px;
+    font-weight: bold; color: black; text-shadow: 1px 1px 1px white;
+}
+
+/* Barra de Vida do Chefe */
+#chefe-barra-vida-container {
+    width: 400px; height: 20px;
+    background-color: #555; border: 2px solid #ff0000;
+    border-radius: 5px; overflow: hidden; position: relative;
+    text-align: center; font-size: 0.8em;
+}
+#chefe-barra-vida-preenchimento { height: 100%; background-color: #c400c4; }
+#chefe-barra-vida-container span {
+    position: absolute; width: 100%; text-align: center; left: 0; top: 2px;
+    font-weight: bold; color: white;
+}
+
+/* --- TELA DE UPGRADE --- */
+#telaUpgrade {
+    position: absolute;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 3px solid #00aaff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    z-index: 10;
+}
+#opcoesUpgrade button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 1.1em;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+#opcoesUpgrade button:hover {
+    background-color: #00aaff;
+    color: black;
+}
+
+
+/* Tela de Fim de Jogo (sem alterações) */
+#telaFimDeJogo {
+    position: absolute; text-align: center; background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px; border-radius: 10px; border: 2px solid #fff; z-index: 10;
+}
+#botaoReiniciar { padding: 10px 20px; font-size: 1em; cursor: pointer; }
